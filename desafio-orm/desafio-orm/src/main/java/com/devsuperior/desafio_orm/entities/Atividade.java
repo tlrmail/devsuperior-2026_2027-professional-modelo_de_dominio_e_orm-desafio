@@ -7,6 +7,7 @@ import java.util.Objects;
 import java.util.Set;
 
 import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -25,6 +26,7 @@ public class Atividade {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String nome;
+	@Column(columnDefinition = "TEXT")
 	private String descricao;
 	private Double preco;
 	
